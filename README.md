@@ -1,4 +1,4 @@
-# voicetext [![Build Status](https://secure.travis-ci.org/pchw/voice-text.png?branch=master)](http://travis-ci.org/pchw/voicetext)
+# voicetext [![Build Status](https://secure.travis-ci.org/pchw/voice-text.png?branch=master)](http://travis-ci.org/pchw/voice-text)
 
 [VoiceText Web API beta](https://cloud.voicetext.jp/) client for node.js
 
