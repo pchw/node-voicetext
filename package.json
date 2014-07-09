@@ -19,6 +19,7 @@
       "type": "MIT"
     }
   ],
+  "main":"src/lib/voicetext.coffee",
   "devDependencies": {
     "grunt-contrib-watch": "~0.5.3",
     "grunt-contrib-coffee": "~0.9.0",
