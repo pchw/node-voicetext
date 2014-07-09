@@ -22,6 +22,7 @@ module.exports = class VoiceText
     ANGER: 'anger'
     SADNESS :'sadness'
   EMOTION_LEVEL:
+    NONE: undefined
     HIGH: '2'
     NORMAL: '1'
   SPEAKER:
