@@ -2,8 +2,7 @@ require('coffee-script/register')
 fs = require 'fs'
 VoiceText = require '../src/lib/voicetext'
 
-voice = new VoiceText('simmp87vt1urexli')
-#voice = new VoiceText('<your api key>')
+voice = new VoiceText('<your api key>')
 
 voice
 .speaker(voice.SPEAKER.HIKARI)
