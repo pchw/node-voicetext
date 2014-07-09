@@ -57,7 +57,7 @@ module.exports = class VoiceText
 
   emotion_level: (lvl)->
     for k,v of @EMOTION_LEVEL
-      if emotion_level is v
+      if @emotion_level is v
         @_emotion_level = v
     @
 
