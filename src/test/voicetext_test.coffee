@@ -1,6 +1,7 @@
 'use strict'
 
-voicetext = require '../lib/voicetext.js'
+should = require 'should'
+voicetext = require '../../lib/voicetext.js'
 
 ###
 ======== A Handy Little Mocha Reference ========
@@ -52,9 +53,9 @@ Should assertions:
   user.should.be.a('object').and.have.property('name', 'tj')
 ###
 
-describe 'Awesome', ()->
-  describe '#of()', ()->
-
-    it 'awesome', ()->
-      voicetext.awesome().should.eql('awesome')
+describe 'VoiceText', ->
+  describe '#of()', ->
+    it 'new', ->
+      v = new voicetext()
+      should.exists v
 

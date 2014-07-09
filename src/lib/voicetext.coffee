@@ -107,7 +107,7 @@ module.exports = class VoiceText
       (res,done)->
         res.setEncoding 'binary'
         res.data = ''
-        res.on 'data', (chunk)-> 
+        res.on 'data', (chunk)->
           res.data += chunk
         res.on 'end', ->
           done null, new Buffer(res.data, 'binary')
