@@ -16,7 +16,7 @@ voice
 .pitch(200)
 .speed(400)
 .volume(200)
-.speak('きょうもいちにちがんばるぞい')
+.speak 'きょうもいちにちがんばるぞい', (e, buf)->
 ```
 
 ## Examples
@@ -26,8 +26,11 @@ VoiceText = require 'voicetext'
 voice = new VoiceText('<your api key>')
 voice
 .speaker(voice.SPEAKER.HIKARI)
-.speak 'おはようございます', './test.wav', (e)->
-  # ./text.wav file generated when callback
+.speak 'おはようございます', (e, buf)->
+  console.error e if e
+  fs.writeFile './test.wav', buf, 'binary', (e)->
+    console.error e if e
+    # ./test.wav file generated
 ```
 
 ## Release History

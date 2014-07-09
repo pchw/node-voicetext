@@ -11,7 +11,6 @@ Licensed under the MIT license.
 'use strict'
 
 request = require 'superagent'
-fs = require 'fs'
 debug = require('debug')('voicetext')
 
 module.exports = class VoiceText
@@ -87,7 +86,7 @@ module.exports = class VoiceText
       speaker: @_speaker
       text: text
 
-  speak: (text, outfile, callback)->
+  speak: (text, callback)->
     return callback new Error 'invalid argument. text: null' unless text
 
     # maximum text size is 200
@@ -116,12 +115,8 @@ module.exports = class VoiceText
       debug "response status: #{res.status}"
       debug "response statusType: #{res.statusType}"
       if res.status is 200
-        debug "output to file: #{outfile}"
         # res.body is binary
-        console.log res.body
-        fs.writeFile outfile, res.body, 'binary', (e)->
-          debug e.stack or e if e
-          callback e
+        callback null, res.body
       else if res.statusType in [4, 5]
         callback new Error(JSON.stringify res.body)
       
