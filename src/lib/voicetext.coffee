@@ -90,6 +90,9 @@ module.exports = class VoiceText
   speak: (text, outfile, callback)->
     return callback new Error 'invalid argument. text: null' unless text
 
+    # maximum text size is 200
+    text = text.slice(0,200)
+
     debug "params: #{JSON.stringify(@build_params text)}"
     debug "access to #{@API_URL}"
     debug "api_key is #{@api_key}"
