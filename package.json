@@ -1,0 +1,33 @@
+{
+  "name": "voicetext",
+  "version": "0.0.0",
+  "main": "lib/voicetext.js",
+  "description": "voicetext client",
+  "homepage": "https://github.com/pchw/node-voicetext",
+  "bugs": "https://github.com/pchw/voicetext/issues",
+  "author": {
+    "name": "pchw",
+    "email": "bump.luv@gmail.com",
+    "url": "http://pchw.github.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pchw/voicetext"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "devDependencies": {
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-coffee": "~0.9.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-coffeelint": "~0.0.8",
+    "grunt-simple-mocha": "~0.4.0",
+    "should": "~3.1.2",
+    "matchdep": "~0.3.0",
+    "mocha-cakes": "~0.9.0",
+    "grunt": "~0.4.2"
+  }
+}
