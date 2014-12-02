@@ -29,6 +29,8 @@ module.exports = class VoiceText
     HARUKA: 'haruka'
     HIKARI: 'hikari'
     TAKERU: 'takeru'
+    SANTA: 'santa'
+    BEAR: 'bear'
 
   constructor: (@api_key)->
     @_pitch = 100
