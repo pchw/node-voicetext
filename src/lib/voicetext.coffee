@@ -31,6 +31,10 @@ module.exports = class VoiceText
     TAKERU: 'takeru'
     SANTA: 'santa'
     BEAR: 'bear'
+  FORMAT:
+    OGG: 'ogg'
+    WAV: 'wav'
+    AAC: 'aac'
 
   constructor: (@api_key)->
     @_pitch = 100
@@ -39,6 +43,7 @@ module.exports = class VoiceText
     @_speaker = @SPEAKER.SHOW
     @_emotion = undefined
     @_emotion_level = undefined
+    @_format = @FORMAT.WAV
     @
 
   speaker: (speaker)->
@@ -78,6 +83,12 @@ module.exports = class VoiceText
       @_volume = lvl
     @
 
+  format: (format)->
+    for k,v of @FORMAT
+      if format is v
+        @_format = v
+    @
+
   build_params: (text)->
     params =
       volume: @_volume
@@ -86,6 +97,7 @@ module.exports = class VoiceText
       emotion_level: @_emotion_level
       emotion: @_emotion
       speaker: @_speaker
+      format: @_format
       text: text
 
   speak: (text, callback)->
