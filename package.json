@@ -1,6 +1,6 @@
 {
   "name": "voicetext",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "lib/voicetext.js",
   "description": "voicetext client",
   "homepage": "https://github.com/pchw/node-voicetext",
