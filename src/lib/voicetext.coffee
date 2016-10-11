@@ -65,8 +65,7 @@ module.exports = class VoiceText
     @
 
   emotion_level: (lvl)->
-    if this._speaker == this.SPEAKER.SHOW
-      return this
+    return @ if @_speaker is @SPEAKER.SHOW
     for k,v of @EMOTION_LEVEL
       if lvl is v
         @_emotion_level = v
