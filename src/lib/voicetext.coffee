@@ -22,6 +22,8 @@ module.exports = class VoiceText
     SADNESS :'sadness'
   EMOTION_LEVEL:
     NONE: undefined
+    EXTREME: '4'
+    SUPER: '3'
     HIGH: '2'
     NORMAL: '1'
   SPEAKER:
@@ -63,8 +65,9 @@ module.exports = class VoiceText
     @
 
   emotion_level: (lvl)->
+    return @ if @_speaker is @SPEAKER.SHOW
     for k,v of @EMOTION_LEVEL
-      if @emotion_level is v
+      if lvl is v
         @_emotion_level = v
     @
 
