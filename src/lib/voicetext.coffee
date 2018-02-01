@@ -135,5 +135,5 @@ module.exports = class VoiceText
         # res.body is binary
         callback null, res.body
       else if res.statusType in [4, 5]
-        callback new Error(JSON.stringify res.body)
+        callback new Error(JSON.stringify res.body.toString())
       
