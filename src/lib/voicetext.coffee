@@ -36,7 +36,7 @@ module.exports = class VoiceText
   FORMAT:
     OGG: 'ogg'
     WAV: 'wav'
-    AAC: 'aac'
+    MP3: 'mp3'
 
   constructor: (@api_key)->
     @_pitch = 100
