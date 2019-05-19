@@ -36,7 +36,7 @@ module.exports = class VoiceText
   FORMAT:
     OGG: 'ogg'
     WAV: 'wav'
-    AAC: 'aac'
+    MP3: 'mp3'
 
   constructor: (@api_key)->
     @_pitch = 100
@@ -135,5 +135,5 @@ module.exports = class VoiceText
         # res.body is binary
         callback null, res.body
       else if res.statusType in [4, 5]
-        callback new Error(JSON.stringify res.body)
+        callback new Error(JSON.stringify res.body.toString())
       

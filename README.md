@@ -1,6 +1,6 @@
 # voicetext [![Build Status](https://travis-ci.org/pchw/node-voicetext.svg?branch=master)](https://travis-ci.org/pchw/node-voicetext)
 
-[VoiceText Web API beta](https://cloud.voicetext.jp/) client for node.js
+[VoiceText Web API](https://cloud.voicetext.jp/webapi) client for node.js
 
 ## Getting Started
 Install the module with: `npm install voicetext`

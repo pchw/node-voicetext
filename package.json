@@ -14,24 +14,21 @@
     "type": "git",
     "url": "https://github.com/pchw/node-voicetext"
   },
-  "licenses": [
-    {
-      "type": "MIT"
-    }
+  "license": "MIT",
+  "keywords": [
+    "voicetext"
   ],
-  "main":"lib/voicetext.js",
-  "keywords":["voicetext"],
   "devDependencies": {
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-contrib-coffee": "~0.9.0",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-coffeelint": "~0.0.8",
-    "grunt-simple-mocha": "~0.4.0",
-    "should": "~3.1.2",
-    "matchdep": "~0.3.0",
+    "coffeescript": "^2.1.1",
+    "grunt": "~1.0.1",
+    "grunt-coffeelint": "0.0.16",
+    "grunt-contrib-clean": "~1.1.0",
+    "grunt-contrib-coffee": "~2.0.0",
+    "grunt-contrib-watch": "~1.0.0",
+    "grunt-simple-mocha": "~0.4.1",
+    "matchdep": "~2.0.0",
     "mocha-cakes": "~0.9.0",
-    "grunt": "~0.4.2",
-    "coffee-script": "^1.7.1"
+    "should": "~13.2.1"
   },
   "dependencies": {
     "superagent": "^0.18.1",
